@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -9,34 +9,25 @@
             android:layout_height="0px"
             android:layout_weight="1">
 
-        <!--ImageView
-         android:id="@+id/bkgnd"
-         android:layout_width="fill_parent"
-         android:layout_height="fill_parent"
-         android:scaleType="centerCrop"
-         android:src="@drawable/bkgnd"-->
-
-        <com.ted.waveform.waveform.view.WaveformView
+        <com.ted.waveform.waveform.view.TWaveformView
                 android:id="@+id/waveform"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
-        <com.ted.waveform.view.MarkerView
+        <com.ted.waveform.waveform.view.TWaveformMarker
                 android:id="@+id/startmarker"
                 android:nextFocusDown="@+id/endmarker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/marker_left"
-                android:contentDescription="@string/start_marker"/>
+                android:contentDescription="@null"/>
 
-        <com.ted.waveform.view.MarkerView
+        <com.ted.waveform.waveform.view.TWaveformMarker
                 android:id="@+id/endmarker"
                 android:nextFocusUp="@+id/startmarker"
                 android:nextFocusDown="@+id/info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/marker_right"
-                android:contentDescription="@string/end_marker"/>
+                android:contentDescription="@null"/>
 
     </RelativeLayout>
 
@@ -44,14 +35,14 @@
             android:id="@+id/info"
             android:nextFocusUp="@+id/endmarker"
             android:nextFocusDown="@+id/play"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/AudioFileInfoOverlayText"
             android:gravity="center"/>
 
     <LinearLayout
             style="@style/ToolbarBackground"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="62dip"
             android:gravity="center">
 
@@ -93,7 +84,7 @@
 
     <LinearLayout
             style="@style/ToolbarBackground"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="62dip"
             android:gravity="center"
             android:orientation="horizontal">
